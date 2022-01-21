@@ -29,6 +29,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'paper_trail'
   spec.add_dependency 'rails', '~> 6.0.4', '>= 6.0.4.1'
+  spec.add_development_dependency 'rubocop'
 
   spec.add_development_dependency 'sqlite3'
 end
