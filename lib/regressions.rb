@@ -13,3 +13,7 @@ module Regressions
     ::Regressions::ModelConfig.new(self).setup
   end
 end
+
+ActiveSupport.on_load(:active_record) do
+  extend Regressions
+end
