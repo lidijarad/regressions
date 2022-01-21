@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 module Regressions
@@ -8,40 +10,40 @@ module Regressions
       @version = regressions_versions(:one)
     end
 
-    test "should get index" do
+    test 'should get index' do
       get versions_url
       assert_response :success
     end
 
-    test "should get new" do
+    test 'should get new' do
       get new_version_url
       assert_response :success
     end
 
-    test "should create version" do
+    test 'should create version' do
       assert_difference('Version.count') do
-        post versions_url, params: { version: {  } }
+        post versions_url, params: { version: {} }
       end
 
       assert_redirected_to version_url(Version.last)
     end
 
-    test "should show version" do
+    test 'should show version' do
       get version_url(@version)
       assert_response :success
     end
 
-    test "should get edit" do
+    test 'should get edit' do
       get edit_version_url(@version)
       assert_response :success
     end
 
-    test "should update version" do
-      patch version_url(@version), params: { version: {  } }
+    test 'should update version' do
+      patch version_url(@version), params: { version: {} }
       assert_redirected_to version_url(@version)
     end
 
-    test "should destroy version" do
+    test 'should destroy version' do
       assert_difference('Version.count', -1) do
         delete version_url(@version)
       end

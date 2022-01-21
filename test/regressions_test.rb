@@ -1,7 +1,11 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
-class Regressions::Test < ActiveSupport::TestCase
-  test "truth" do
-    assert_kind_of Module, Regressions
+module Regressions
+  class Test < ActiveSupport::TestCase
+    test 'truth' do
+      assert_kind_of Module, Regressions
+    end
   end
 end
