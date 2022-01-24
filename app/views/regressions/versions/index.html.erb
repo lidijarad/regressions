@@ -11,10 +11,10 @@
   </thead>
   <tbody>
     <% @versions.each do |version| %>
-      <tr>
+      <tr >
         <td><%= version.id %></td>
         <td><%= version.item_type %></td>
-        <td><%= version.id %></td>
+        <td><%= link_to  "Diff", version_path(version.id)%></td>
       </tr>
     <% end %>
   </tbody>
