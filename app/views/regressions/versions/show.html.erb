@@ -2,18 +2,18 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Attribute key changes</th>
+      <th>Attribute</th>
       <th>Value Before </th>
       <th>Value after </th>
     </tr>
   </thead>
   <tbody>
+    <% @version.changeset.keys.each do |key| %>
       <tr>
-      	<% @version.changeset.keys.each do |key| %>
-      	<td><%= key %></td>
+        <td><%= key %></td>
         <td><%= @version.changeset[key][0] %></td>
         <td><%= @version.changeset[key][1] %></td>
-        <% end %>
       </tr>
+    <% end %>
   </tbody>
 </table>
