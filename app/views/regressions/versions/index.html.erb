@@ -4,9 +4,10 @@
 <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th>Version ID </th>
-      <th>Item Type </th>
-      <th>Diff </th>
+      <th>Version ID</th>
+      <th>Item Type</th>
+      <th>Item ID</th>
+      <th>Diff</th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +15,7 @@
       <tr >
         <td><%= version.id %></td>
         <td><%= version.item_type %></td>
+        <td><%= version.item_id %></td>
         <td><%= link_to  "Diff", version_path(version.id)%></td>
       </tr>
     <% end %>

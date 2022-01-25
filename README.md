@@ -45,6 +45,16 @@ class User < ApplicationRecord
 end
 ```
 
+### Mount `Regressions::Engine` in your application's routes.rb file
+
+If you wish to utilise the views defined in this engine to inspect changes to your model, then you need to mount the engine in your application's routes.rb file at a desired path.
+
+```ruby
+  mount Regressions::Engine => "/regressions"
+```
+
+
+
 
 ## Installation
 Add this line to your application's Gemfile:
