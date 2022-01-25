@@ -17,6 +17,7 @@ end
 
 ### Track regressions on specific columns
 
+You are able to specify specific columns you wish to track. This will add a `tracked_columns` attribute to your model when you pass in the the `only` option as follows:
 
 ```ruby
 class User < ApplicationRecord
@@ -24,6 +25,26 @@ class User < ApplicationRecord
   opsbox_track_regressions only: [:name, :address]
 end
 ```
+
+### Alert if your model has a regression
+
+A `notify_changes` method can be added to the model. Here you can define a specific action/alert that needs to happen if any of the model's `tracked_columns` change as follows:
+
+```ruby
+
+class User < ApplicationRecord
+  has_paper_trail
+  opsbox_track_regressions only: [:name, :address]
+
+  def notify_changes
+    # Rails.logger.info('Regression detected')
+    # Sentry.capture_message('Regression detected')
+    # send an email
+    # notify another application
+  end
+end
+```
+
 
 ## Installation
 Add this line to your application's Gemfile:
