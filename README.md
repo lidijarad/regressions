@@ -1,5 +1,5 @@
 # Regressions
-Short description and motivation.
+If you want to track changes across your ActiveRecord models, then you can leverage ``paper_trail` gem. 
 
 ## Usage
 How to use my plugin.
