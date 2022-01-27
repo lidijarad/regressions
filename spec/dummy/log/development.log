@@ -1,0 +1,368 @@
+Started GET "/" for ::1 at 2022-01-20 13:04:24 +0200
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/lidija/.rvm/gems/ruby-2.7.1/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/lidija/.rvm/gems/ruby-2.7.1/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.7ms | Allocations: 353)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 1838)
+
+
+Started GET "/regressions" for ::1 at 2022-01-20 13:04:29 +0200
+Processing by Regressions::VersionsController#show as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 656)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007fdbe731a978>
+Did you mean?  try):
+  
+/Users/lidija/zappi/engines/regressions/app/controllers/regressions/versions_controller.rb:7:in `show'
+actionpack (6.0.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+railties (6.0.4.1) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.4.1) lib/rails/railtie.rb:190:in `method_missing'
+actionpack (6.0.4.1) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.0.4.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.4.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/lidija/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/webrick/httpserver.rb:140:in `service'
+/Users/lidija/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/webrick/httpserver.rb:96:in `run'
+/Users/lidija/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/regressions" for ::1 at 2022-01-20 13:04:40 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Regressions::VersionsController#show as HTML
+  Rendering /Users/lidija/zappi/engines/regressions/app/views/regressions/versions/show.html.erb within layouts/regressions/application
+  Rendered /Users/lidija/zappi/engines/regressions/app/views/regressions/versions/show.html.erb within layouts/regressions/application (Duration: 12.0ms | Allocations: 5309)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 6938)
+
+
+  
+ActionView::Template::Error (undefined method `edit_version_path' for #<#<Class:0x00007fdbe7351ae0>:0x00007fdbe7342608>):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <%= link_to 'Edit', edit_version_path(@version) %> |
+    4: <%= link_to 'Back', versions_path %>
+  
+/Users/lidija/zappi/engines/regressions/app/views/regressions/versions/show.html.erb:3
+actionview (6.0.4.1) lib/action_view/base.rb:274:in `_run'
+actionview (6.0.4.1) lib/action_view/template.rb:185:in `block in render'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:182:in `instrument'
+actionview (6.0.4.1) lib/action_view/template.rb:385:in `instrument_render_template'
+actionview (6.0.4.1) lib/action_view/template.rb:183:in `render'
+actionview (6.0.4.1) lib/action_view/renderer/template_renderer.rb:58:in `block (2 levels) in render_template'
+actionview (6.0.4.1) lib/action_view/renderer/abstract_renderer.rb:88:in `block in instrument'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `instrument'
+actionview (6.0.4.1) lib/action_view/renderer/abstract_renderer.rb:87:in `instrument'
+actionview (6.0.4.1) lib/action_view/renderer/template_renderer.rb:57:in `block in render_template'
+actionview (6.0.4.1) lib/action_view/renderer/template_renderer.rb:65:in `render_with_layout'
+actionview (6.0.4.1) lib/action_view/renderer/template_renderer.rb:56:in `render_template'
+actionview (6.0.4.1) lib/action_view/renderer/template_renderer.rb:13:in `render'
+actionview (6.0.4.1) lib/action_view/renderer/renderer.rb:61:in `render_template_to_object'
+actionview (6.0.4.1) lib/action_view/renderer/renderer.rb:29:in `render_to_object'
+actionview (6.0.4.1) lib/action_view/rendering.rb:117:in `block in _render_template'
+actionview (6.0.4.1) lib/action_view/base.rb:304:in `in_rendering_context'
+actionview (6.0.4.1) lib/action_view/rendering.rb:116:in `_render_template'
+actionpack (6.0.4.1) lib/action_controller/metal/streaming.rb:218:in `_render_template'
+actionview (6.0.4.1) lib/action_view/rendering.rb:103:in `render_to_body'
+actionpack (6.0.4.1) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (6.0.4.1) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (6.0.4.1) lib/abstract_controller/rendering.rb:25:in `render'
+actionpack (6.0.4.1) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (6.0.4.1) lib/active_support/core_ext/benchmark.rb:14:in `block in ms'
+/Users/lidija/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/benchmark.rb:308:in `realtime'
+activesupport (6.0.4.1) lib/active_support/core_ext/benchmark.rb:14:in `ms'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+activerecord (6.0.4.1) lib/active_record/railties/controller_runtime.rb:34:in `cleanup_view_runtime'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+/Users/lidija/zappi/engines/regressions/app/controllers/regressions/versions_controller.rb:7:in `show'
+actionpack (6.0.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+railties (6.0.4.1) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.4.1) lib/rails/railtie.rb:190:in `method_missing'
+actionpack (6.0.4.1) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.0.4.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.4.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/lidija/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/webrick/httpserver.rb:140:in `service'
+/Users/lidija/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/webrick/httpserver.rb:96:in `run'
+/Users/lidija/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/regressions" for ::1 at 2022-01-20 13:05:09 +0200
+Processing by Regressions::VersionsController#show as HTML
+  Rendering /Users/lidija/zappi/engines/regressions/app/views/regressions/versions/show.html.erb within layouts/regressions/application
+  Rendered /Users/lidija/zappi/engines/regressions/app/views/regressions/versions/show.html.erb within layouts/regressions/application (Duration: 0.5ms | Allocations: 71)
+Completed 200 OK in 61ms (Views: 60.8ms | ActiveRecord: 0.0ms | Allocations: 16763)
+
+
+Started GET "/regressions" for ::1 at 2022-01-20 13:10:13 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Regressions::VersionsController#show as HTML
+  Rendering /Users/lidija/zappi/engines/regressions/app/views/regressions/versions/show.html.erb within layouts/regressions/application
+  Rendered /Users/lidija/zappi/engines/regressions/app/views/regressions/versions/show.html.erb within layouts/regressions/application (Duration: 0.4ms | Allocations: 74)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 3883)
+
+
+Started GET "/regressions" for ::1 at 2022-01-20 13:11:05 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Regressions::VersionsController#show as HTML
+  [1m[36mRegressions::Version Load (0.2ms)[0m  [1m[34mSELECT "regressions_versions".* FROM "regressions_versions" ORDER BY "regressions_versions"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.6ms | Allocations: 3947)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: regressions_versions):
+  
+sqlite3 (1.4.2) lib/sqlite3/database.rb:147:in `initialize'
+sqlite3 (1.4.2) lib/sqlite3/database.rb:147:in `new'
+sqlite3 (1.4.2) lib/sqlite3/database.rb:147:in `prepare'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/sqlite3/database_statements.rb:54:in `block (2 levels) in exec_query'
+activesupport (6.0.4.1) lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+activesupport (6.0.4.1) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (6.0.4.1) lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/sqlite3/database_statements.rb:40:in `block in exec_query'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract_adapter.rb:728:in `block (2 levels) in log'
+activesupport (6.0.4.1) lib/active_support/concurrency/load_interlock_aware_monitor.rb:26:in `block (2 levels) in synchronize'
+activesupport (6.0.4.1) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+activesupport (6.0.4.1) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+activesupport (6.0.4.1) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+activesupport (6.0.4.1) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract_adapter.rb:727:in `block in log'
+activesupport (6.0.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract_adapter.rb:718:in `log'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/sqlite3/database_statements.rb:39:in `exec_query'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract/database_statements.rb:493:in `select_prepared'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract/database_statements.rb:68:in `select_all'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract/query_cache.rb:105:in `block in select_all'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract/query_cache.rb:122:in `block in cache_sql'
+activesupport (6.0.4.1) lib/active_support/concurrency/load_interlock_aware_monitor.rb:26:in `block (2 levels) in synchronize'
+activesupport (6.0.4.1) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+activesupport (6.0.4.1) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+activesupport (6.0.4.1) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+activesupport (6.0.4.1) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract/query_cache.rb:113:in `cache_sql'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract/query_cache.rb:105:in `select_all'
+activerecord (6.0.4.1) lib/active_record/querying.rb:46:in `find_by_sql'
+activerecord (6.0.4.1) lib/active_record/relation.rb:824:in `block in exec_queries'
+activerecord (6.0.4.1) lib/active_record/relation.rb:842:in `skip_query_cache_if_necessary'
+activerecord (6.0.4.1) lib/active_record/relation.rb:811:in `exec_queries'
+activerecord (6.0.4.1) lib/active_record/relation.rb:626:in `load'
+activerecord (6.0.4.1) lib/active_record/relation.rb:250:in `records'
+activerecord (6.0.4.1) lib/active_record/relation.rb:245:in `to_ary'
+activerecord (6.0.4.1) lib/active_record/relation/finder_methods.rb:527:in `find_nth_with_limit'
+activerecord (6.0.4.1) lib/active_record/relation/finder_methods.rb:512:in `find_nth'
+activerecord (6.0.4.1) lib/active_record/relation/finder_methods.rb:120:in `first'
+activerecord (6.0.4.1) lib/active_record/relation/finder_methods.rb:151:in `last'
+activerecord (6.0.4.1) lib/active_record/querying.rb:21:in `last'
+/Users/lidija/zappi/engines/regressions/app/controllers/regressions/versions_controller.rb:7:in `show'
+actionpack (6.0.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+railties (6.0.4.1) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.4.1) lib/rails/railtie.rb:190:in `method_missing'
+actionpack (6.0.4.1) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.0.4.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.4.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/lidija/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/webrick/httpserver.rb:140:in `service'
+/Users/lidija/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/webrick/httpserver.rb:96:in `run'
+/Users/lidija/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/regressions" for ::1 at 2022-01-20 13:20:44 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Regressions::VersionsController#show as HTML
+  Rendering /Users/lidija/zappi/engines/regressions/app/views/regressions/versions/show.html.erb within layouts/regressions/application
+  Rendered /Users/lidija/zappi/engines/regressions/app/views/regressions/versions/show.html.erb within layouts/regressions/application (Duration: 0.4ms | Allocations: 88)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 3916)
+
+
+Started GET "/regressions" for ::1 at 2022-01-20 13:20:50 +0200
+Processing by Regressions::VersionsController#show as HTML
+  Rendering /Users/lidija/zappi/engines/regressions/app/views/regressions/versions/show.html.erb within layouts/regressions/application
+  Rendered /Users/lidija/zappi/engines/regressions/app/views/regressions/versions/show.html.erb within layouts/regressions/application (Duration: 0.4ms | Allocations: 85)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3508)
+
+
+Started GET "/regressions" for ::1 at 2022-01-20 13:21:35 +0200
+Processing by Regressions::VersionsController#show as HTML
+  Rendering /Users/lidija/zappi/engines/regressions/app/views/regressions/versions/show.html.erb within layouts/regressions/application
+  Rendered /Users/lidija/zappi/engines/regressions/app/views/regressions/versions/show.html.erb within layouts/regressions/application (Duration: 0.3ms | Allocations: 72)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3500)
+
+
